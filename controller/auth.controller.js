@@ -24,7 +24,7 @@ exports.loginUsers = async (req, res) => {
         if (!verify) {
             return res.status(404).json({ message: "Password Not Found" })
         }
-        res.json({ message: "Login Success" })
+        res.json({ message: "Login Success", result })
     } catch (error) {
         console.log(error);
         res.status(400).json({ message: "Resource Not Fount", error: error.message })
